@@ -1,7 +1,7 @@
 # psw
 Два сервиса producer(загружает сообщения в очередь) и consumer(получает их через GET запрос) общаются через NATS JetStream
 
-## How to run
+## How to run ##
 nast-server -js 
 cd ../../producer && go run .
 cd consumer/cmd && go run .
