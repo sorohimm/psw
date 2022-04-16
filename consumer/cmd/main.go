@@ -29,7 +29,6 @@ func init() {
 }
 
 func main() {
-
 	nc, err := nats.Connect(nats.DefaultURL)
 	if err != nil {
 		log.Fatal(err)
@@ -37,7 +36,7 @@ func main() {
 	defer nc.Close()
 
 	js, _ := nc.JetStream()
-	sub, _ := js.PullSubscribe(subSubjectName, "MONITOR")
+	sub, err := js.PullSubscribe(subSubjectName, "MONITOR")
 
 	injector, err := infrastructure.Injector(log, nc, js, sub)
 	if err != nil {
@@ -53,7 +52,7 @@ func main() {
 		v1.GET("/all", balanceController.GetAllQuotes)
 	}
 
-	err = router.Run()
+	err = router.Run(":8081")
 	if err != nil {
 		log.Fatal("main: router deployment error")
 	}

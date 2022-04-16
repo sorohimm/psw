@@ -72,7 +72,6 @@ func main() {
 	for {
 		doc, err := xmlquery.LoadURL(url)
 		if err != nil {
-			log.Println(err)
 			continue // just skip
 		}
 
