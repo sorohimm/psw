@@ -2,6 +2,10 @@
 Два сервиса producer(загружает сообщения в очередь) и consumer(получает их через GET запрос) общаются через NATS JetStream
 
 ## How to run ##
+    git clone https://github.com/sorohimm/psw.git
+    
+    cd psw
+    
     nast-server -js
     
     cd producer && go run .
