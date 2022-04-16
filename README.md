@@ -1,5 +1,5 @@
 # psw
-Два сервиса producer(загружает сообщения в очередь) и consumer(получает их через GET запрос) общаются через NATS JetStream
+Два сервиса producer(загружает сообщения в очередь) и consumer(получает их через **GET** запрос) общаются через NATS JetStream
 
 ## How to run ##
     git clone https://github.com/sorohimm/psw.git
