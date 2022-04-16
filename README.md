@@ -2,11 +2,11 @@
 Два сервиса producer(загружает сообщения в очередь) и consumer(получает их через GET запрос) общаются через NATS JetStream
 
 ## How to run ##
-    nast-server -js 
+    ```nast-server -js```
     
-    cd ../../producer && go run .
+    ```cd ../../producer && go run .```
     
-    cd consumer/cmd && go run .
+    ```cd consumer/cmd && go run .```
 
 
 ## Queue
