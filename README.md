@@ -4,10 +4,9 @@
 ## How to run ##
     nast-server -js
     
-    cd ../../producer && go run .
+    cd producer && go run .
     
-    cd consumer/cmd && go run .
-
+    cd ../../consumer/cmd && go run .
 
 ## Queue
 Забрать сообщения из очереди можно так: 
